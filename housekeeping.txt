@@ -1,0 +1,3 @@
+-Install and create a virtual environment
+-Install and create an empty django project
+-walkthrough of the files
