@@ -9,5 +9,6 @@ app_name = 'core'
 
 
 urlpatterns = [
-    path('', views.frontpage, name='frontpage')
+    path('', views.frontpage, name='frontpage'),
+    path('shop/', views.shop, name='shop')
 ]
