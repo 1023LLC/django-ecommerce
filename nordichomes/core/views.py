@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from product.models import Product
+from product.models import Product, Category
 
 
 def frontpage(request):
@@ -13,7 +13,9 @@ def frontpage(request):
 
 
 def shop(request):
+    categories = Category.objects.all()
     products = Product.objects.all()
     
+    context = {'products':products, 'categories':categories}
     
-    return render(request, 'core/shop.html', {'products':products})
+    return render(request, 'core/shop.html', context)
