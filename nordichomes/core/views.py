@@ -18,6 +18,9 @@ def shop(request):
     
     active_category = request.GET.get('category', '')
     
+    if active_category:
+        products = products.filter(category__slug=active_category)
+    
     context = {'products':products, 'categories':categories, 'active_category':active_category}
     
     return render(request, 'core/shop.html', context)
