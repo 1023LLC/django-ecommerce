@@ -16,6 +16,8 @@ def shop(request):
     categories = Category.objects.all()
     products = Product.objects.all()
     
-    context = {'products':products, 'categories':categories}
+    active_category = request.GET.get('category', '')
+    
+    context = {'products':products, 'categories':categories, 'active_category':active_category}
     
     return render(request, 'core/shop.html', context)
