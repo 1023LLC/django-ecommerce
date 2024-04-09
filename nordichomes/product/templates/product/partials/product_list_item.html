@@ -2,7 +2,7 @@
 <div class="w-full md:w-1/3 xl:w-1/4 p-6">
 
     <a href="{% url 'product:product' product.slug %}" class="">
-        <img src="{% static 'bed.jpg' %}" alt="" class="rounded-xl hover:shadow-lg transition duration-500 ease-in-out w-[200px] h-[200px]">
+        <img src="{{ product.get_thumbnail }}" alt="" class="rounded-xl hover:shadow-lg transition duration-500 ease-in-out w-[200px] h-[200px]">
     </a>
 
     <div class="pt-3 flex items-center justify-between">
