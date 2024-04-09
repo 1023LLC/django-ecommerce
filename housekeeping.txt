@@ -1,3 +1,52 @@
--Install and create a virtual environment
--Install and create an empty django project
--walkthrough of the files
+    PART ONE
+-Install and create a virtual environment - DONE
+-Install and create an empty django project - DONE
+-walkthrough of the files - DONE
+
+    PART TWO
+-Create app for core pages - DONE
+-Create a simple base.html file - DONE
+-Extend base.html and use it for frontpage - DONE
+-Add "products" to the frontpage - DONE
+
+    PART THREE
+-Create app for products - DONE
+-Create database model for category - DONE
+-Add categories in admin interface - DONE
+-Create database model for products - DONE
+-Add a few products in the admin interface - DONE
+-Show products on the frontpage - DONE
+
+    PART FOUR
+-Create html for the category/shop page - DONE
+-Create html for the product detail page - DONE
+
+
+    PART FIVE
+-Shows categories in the sidebar - DONE
+-Show active category - DONE
+-Simple product search - DONE
+
+    PART SIX
+-Fix dynamic information in product list - DONE
+-Make product list reusable - DONE
+-Show product detail page - DONE
+
+    PART SEVEN
+-Create django app for the cart - DONE
+-Create a cart class - DONE
+-Make cart globally available - DONE
+
+
+    PART EIGHT
+-Create view for adding to cart
+-Include htmx cdn (<script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+)
+-Create reusable menu cart html - DONE
+-Add to cart - DONE
+
+
+    PART NINE
+-Set up html for the sign up page - DONE
+-Set up html for the log in page 
+-Add product images
