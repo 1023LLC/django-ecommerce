@@ -24,6 +24,12 @@ def myaccount(request):
 
 
 
+@login_required
+def edit_myaccount(request):
+    return render(request, 'core/edit_myaccount.html')    
+
+
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
