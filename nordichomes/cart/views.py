@@ -19,3 +19,9 @@ def cart(request):
 @login_required
 def checkout(request):
     return render(request, 'cart/checkout.html')
+
+
+
+@login_required
+def hx_menu_cart(request):
+    return render(request, 'cart/menu_cart.html')
