@@ -6,6 +6,8 @@ from django.db.models import Q
 from .forms import SignUpForm
 from django.contrib.auth import login
 
+from django.contrib.auth.decorators import login_required
+
 
 def frontpage(request):
     products = Product.objects.all()[0:8]
@@ -16,9 +18,9 @@ def frontpage(request):
 
 
 
-def login_old(request):
-    return render(request, 'core/login.html')
-
+@login_required
+def myaccount(request):
+    return render(request, 'core/myaccount.html')    
 
 
 
