@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 
 from .models import Order, OrderItem
 
-from cart import Cart
+from cart.cart import Cart
 
 
 def start_order(request):
@@ -21,7 +21,7 @@ def start_order(request):
         order = Order.objects.create(user=request.user, first_name=first_name, last_name=last_name, email=email, phone=phone, address=address, zipcode=zipcode, place=place)
         
         
-        for item in cart():
+        for item in cart:
             product = item['product']
             quantity = int(item['quantity'])
             price = product.price * quantity
