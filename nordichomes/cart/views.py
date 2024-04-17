@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 
 from product.models import Product
 
+from django.conf import settings
+
 
 def add_to_cart(request, product_id):
     cart = Cart(request)
@@ -57,7 +59,8 @@ def update_cart(request, product_id, action):
 
 @login_required
 def checkout(request):
-    return render(request, 'cart/checkout.html')
+    pub_key = settings.STRIPE_API_KEY_PUBLISHABLE
+    return render(request, 'cart/checkout.html', {'pub_key': pub_key})
 
 
 
