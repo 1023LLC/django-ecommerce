@@ -11,12 +11,21 @@ def product(request, slug):
         content = request.POST.get('content', '')
         
         if content:
-            review = Review.objects.create(
-                product=product,
-                rating=rating,
-                content=content,
-                created_by=request.user
-            )
+            reviews = Review.objects.filter(created_by=request.user, product=product)
+            
+            if reviews.count() > 0:
+                review = reviews.first()
+                review.rating = rating
+                review.content = content
+                review.save()
+                
+            else:
+                review = Review.objects.create(
+                    product=product,
+                    rating=rating,
+                    content=content,
+                    created_by=request.user
+                )
             return redirect("product:product", slug=slug)
     
     return render(request, 'product/product.html', {'product':product})
