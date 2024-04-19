@@ -10,7 +10,7 @@
     <div class="images w-full mb-6 lg:mb-0 lg:w-3/5">
       <img 
         src="{% if product.image %}{{ product.image.url }}{% else %}'https://via.placeholder.com/240x240.jpg'{% endif %}" 
-        alt="couch" class="rounded-xl" 
+        alt="{{ product.name }}" class="rounded-xl" 
       />
     </div>
 
